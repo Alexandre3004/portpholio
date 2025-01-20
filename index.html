@@ -4,64 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - K. Alexandre-le-grand</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        section {
-            margin: 2rem auto;
-            padding: 1rem;
-            max-width: 900px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2 {
-            color: #444;
-        }
-
-        .skills, .interests {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill, .interest {
-            background: #007bff;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .contact {
-            text-align: center;
-            margin-top: 2rem;
-        }
-    </style>
-</head>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - K. Alexandre-le-grand</title>
+        <style>
+            /* Styles existants */
+            body {
+                font-family: 'Poppins', Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
+                transition: background-color 0.3s ease;
+            }
+    
+            header {
+                background-color: #333;
+                color: white;
+                padding: 2rem;
+                text-align: center;
+                transform: translateY(0);
+                transition: transform 0.3s ease;
+            }
+    
+            header:hover {
+                transform: translateY(-5px);
+            }
+    
+            section {
+                margin: 2rem auto;
+                padding: 1.5rem;
+                max-width: 900px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transform: scale(1);
+                transition: all 0.3s ease;
+            }
+    
+            section:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+    
+            .skill, .interest {
+                background: #007bff;
+                color: white;
+                padding: 0.7rem 1.2rem;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+    
+            .skill:hover, .interest:hover {
+                background: #0056b3;
+                transform: translateY(-3px);
+            }
+    
+            .contact {
+                text-align: center;
+                margin-top: 2rem;
+                padding: 2rem;
+            }
+    
+            .contact p {
+                transition: color 0.3s ease;
+            }
+    
+            .contact p:hover {
+                color: #007bff;
+            }
+    
+            /* Animation pour les sections au chargement */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            section {
+                animation: fadeIn 0.5s ease forwards;
+            }
+    
+            /* Style amélioré pour les listes */
+            ul li {
+                transition: padding-left 0.3s ease;
+                list-style-type: none;
+                padding: 0.5rem 0;
+            }
+    
+            ul li:hover {
+                padding-left: 10px;
+                color: #007bff;
+            }
+    
+            /* Footer amélioré */
+            footer {
+                text-align: center;
+                padding: 1.5rem;
+                background-color: #333;
+                color: white;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                transition: background-color 0.3s ease;
+            }
+    
+            footer:hover {
+                background-color: #222;
+            }
+        </style>
+    </head>
 <body>
     <header>
         <h1>K. Alexandre-le-grand</h1>
